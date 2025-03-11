@@ -4,3 +4,18 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.13/samples
  */
+plugins {
+    application
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+application {
+    mainClass = "org.example.Main"
+}
