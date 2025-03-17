@@ -1,4 +1,6 @@
-package org.example;
+package org.example.commands;
+
+import org.example.receiver.TaskManager;
 
 public class AddCommand extends Invoker {
 
@@ -8,9 +10,7 @@ public class AddCommand extends Invoker {
 
     @Override
     public boolean execute() {
-
-
-
+        System.out.println("Adding task");
         return false;
     }
 

@@ -1,4 +1,6 @@
-package org.example;
+package org.example.commands;
+
+import org.example.receiver.TaskManager;
 
 public abstract class Invoker {
     public TaskManager taskManager;
