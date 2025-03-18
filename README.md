@@ -1,4 +1,3 @@
-Here is an updated README with the specific requirements, usage instructions, and the command to clone the repository:
 
 ---
 
@@ -146,5 +145,3 @@ On Windows:
 5. Open a Pull Request
 
 ---
-
-I hope this README helps with your project!
