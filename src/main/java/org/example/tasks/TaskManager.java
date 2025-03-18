@@ -1,40 +1,27 @@
-package org.example.receiver;
+package org.example.tasks;
+
+import org.example.commands.CommandHistory;
+import org.example.commands.Invoker;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.example.commands.*;
 
 public class TaskManager {
 
-    ArrayList<String> tasks = new ArrayList<String>();
+    //
+    ArrayList<Tasks> tasks = new ArrayList<Tasks>();
     TaskManager taskManager = this;
-    private CommandHistory history = new CommandHistory();
+    private CommandHistory commandHistory = new CommandHistory();
 
     public TaskManager(String[] args) {
-        tasks.addAll(Arrays.asList(args));
-        for (String task : tasks) {
-            switch (task) {
-                case "add":
-                    execute(new AddCommand(taskManager));
-                    break;
-                case "list":
-                    execute(new ListCommand(taskManager));
-                    break;
-                case "delete":
-                    execute(new RemoveCommand(taskManager));
-                    break;
-                    default:
-                        System.out.println("Unknown task: " + task);
-                        break;
-            }
-        }
+
+
+
     }
 
+    //
     public void execute(Invoker invoker) {
-        if(invoker.execute()) {
-            history.push(invoker);
+        if (invoker.execute()) {
+            commandHistory.push(invoker);
         }
     }
-
 }
